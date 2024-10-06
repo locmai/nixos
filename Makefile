@@ -19,5 +19,3 @@ sync-remote:
 	@echo "Copying zsh"	
 	@cp ~/.zshrc home/locmai/.zshrc
 	@cp ~/.p10k.zsh home/locmai/.p10k.zsh
-	@echo "Copying /etc/nixos"
-	@cp -r /etc/nixos/* nixos/

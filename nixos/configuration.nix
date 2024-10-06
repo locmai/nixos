@@ -61,14 +61,6 @@
     };
   };
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {
-      fonts = [
-        "FiraCode"
-      ];
-    })
-  ];
-
   xdg.portal = {
     enable = true;
     wlr.enable = true;

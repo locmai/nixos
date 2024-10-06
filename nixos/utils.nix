@@ -14,8 +14,10 @@
     neofetch
     neovim
     python3
+    telegram-desktop
     tmux
     tree
+    ripgrep
     unzip
     wget
   ];

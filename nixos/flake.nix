@@ -20,14 +20,17 @@
 	  ./bootloader.nix
 	  ./configuration.nix
 	  ./display-manager.nix
-          ./fonts.nix
+    ./fonts.nix
 	  ./gc.nix
 	  ./graphics.nix
+    ./hardware-configuration.nix
 	  ./hyprland.nix
 	  ./kubernetes.nix
 	  ./theme.nix
+    ./lsp.nix
 	  ./programs.nix
 	  ./utils.nix
+    ./virtualisation.nix
 	  nixos-hardware.nixosModules.lenovo-thinkpad-x1-10th-gen
 	  home-manager.nixosModules.home-manager
 	];

@@ -264,7 +264,7 @@
 
     "custom/logout_menu": {
         "return-type": "json",
-        "exec": "echo '{ \"text\":\"󰐥\", \"tooltip\": \"logout menu\" }'",
+        "exec": "echo '{ \"text\":\" 󰐥 \", \"tooltip\": \"logout menu\" }'",
         "interval": "once",
         "on-click": "fish -c wlogout_uniqe",
     },

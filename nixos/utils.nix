@@ -6,6 +6,7 @@
     curl
     discord
     file
+    fzf
     gcc
     git
     gnumake

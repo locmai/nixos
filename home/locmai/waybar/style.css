@@ -3,7 +3,6 @@
 * {
   border: none;
   font-family: 'FiraCode';
-  padding: 2 4 2 4;
 }
 
 window.bottom_bar#waybar {
@@ -14,7 +13,14 @@ window.bottom_bar#waybar {
 window.top_bar#waybar {
   background-color: alpha(@base, 0.7);
   border-bottom: solid alpha(@surface1, 0.7) 2;
-  margin: 10;
+}
+
+window.left_bar#waybar {
+  background-color: alpha(@base, 0.7);
+  border-top: solid alpha(@surface1, 0.7) 2;
+  border-right: solid alpha(@surface1, 0.7) 2;
+  border-bottom: solid alpha(@surface1, 0.7) 2;
+  border-radius: 0 15 15 0;
 }
 
 window.bottom_bar .modules-center {

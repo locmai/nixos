@@ -26,6 +26,7 @@
 	  ./hyprland.nix
 	  ./kubernetes.nix
 	  ./theme.nix
+	  ./programs.nix
 	  ./utils.nix
 	  nixos-hardware.nixosModules.lenovo-thinkpad-x1-10th-gen
 	  home-manager.nixosModules.home-manager

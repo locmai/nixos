@@ -10,7 +10,7 @@
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock#time", "custom/separator", "clock#week", "custom/separator_dot", "clock#month", "custom/separator", "clock#calendar"],
-    "modules-right": [ "bluetooth", "network", "battery", "group/misc", "custom/logout_menu" ],
+    "modules-right": [ "bluetooth", "network", "group/misc", "custom/logout_menu" ],
 
     // Modules Config
     "hyprland/workspaces": {
@@ -44,9 +44,26 @@
         "tooltip": false,
     },
 
+    "battery": {
+        "states": {
+            "high": 90,
+            "upper-medium": 70,
+            "medium": 50,
+            "lower-medium": 30,
+            "low": 10,
+        },
+        "format": "{icon}{capacity}%",
+        "format-charging": "󱐋{icon}{capacity}%",
+        "format-plugged": "󰚥{icon}{capacity}%",
+        "format-time": "{H} h {M} min",
+        "format-icons": [ "󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
+        "tooltip-format": "{timeTo}",
+    },
+
     "clock#time": {
         "format": "{:%I:%M %p %Ez}",
         // "locale": "en_US.UTF-8",
+        // "timezones": [ "Europe/Kyiv", "America/New_York" ],
     },
 
     "custom/separator": {
@@ -114,22 +131,6 @@
         },
     },
 
-    "battery": {
-        "states": {
-            "high": 90,
-            "upper-medium": 70,
-            "medium": 50,
-            "lower-medium": 30,
-            "low": 10,
-        },
-        "format": "{icon}{capacity}%",
-        "format-charging": "󱐋{icon}{capacity}%",
-        "format-plugged": "󰚥{icon}{capacity}%",
-        "format-time": "{H} h {M} min",
-        "format-icons": [ "󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
-        "tooltip-format": "{timeTo}",
-    },
-
     "custom/media": {
         "format": "{icon}󰎈",
         "restart-interval": 2,
@@ -166,9 +167,9 @@
 
     "network": {
         "format": "󰤭",
-        "format-wifi": "{icon}  ({signalStrength}%) {essid}",
+        "format-wifi": "{icon}({signalStrength}%){essid}",
         "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ],
-        "format-disconnected": "󰤫  Disconnected",
+        "format-disconnected": "󰤫 Disconnected",
         "tooltip-format": "wifi <span color='#ee99a0'>off</span>",
         "tooltip-format-wifi":"SSID: {essid}({signalStrength}%), {frequency} MHz\nInterface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>",
         "tooltip-format-disconnected": "<span color='#ed8796'>disconnected</span>",
@@ -263,7 +264,7 @@
 
     "custom/logout_menu": {
         "return-type": "json",
-        "exec": "echo '{ \"text\":\" 󰐥  \", \"tooltip\": \"logout menu\" }'",
+        "exec": "echo '{ \"text\":\"󰐥\", \"tooltip\": \"logout menu\" }'",
         "interval": "once",
         "on-click": "fish -c wlogout_uniqe",
     },

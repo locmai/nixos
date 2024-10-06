@@ -2,7 +2,9 @@
 
 {
   environment.systemPackages = with pkgs; [
+    pavucontrol
     curl
+    discord
     file
     gcc
     git

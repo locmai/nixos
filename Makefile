@@ -1,7 +1,7 @@
 HOME_SRC_DIR := ~/.config
 HOME_DEST_DIR := home/locmai
 
-DIRS := waybar hypr
+DIRS := waybar hypr gtk-3.0 gtk-4.0 rofi
 
 default:
 	@for dir in $(DIRS); do \

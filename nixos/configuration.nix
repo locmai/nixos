@@ -89,20 +89,6 @@
   services.dbus.enable = true;
   services.udev.enable = true;
 
-  services.logind = {
-    lidSwitch = "ignore";
-  };
-
-  systemd.services.handleLidClose = {
-    description = "Handle lid close event";
-    after = [ "multi-user.target" ];
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      ExecStart = "${pkgs.bash}/bin/bash -c 'while true; do if grep -q closed /proc/acpi/button/lid/LID/state; then hyprctl dispatch dpms off eDP-1; else hyprctl dispatch dpms on eDP-1; fi; sleep 1; done'";
-      Restart = "always";
-    };
-  };
-  
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

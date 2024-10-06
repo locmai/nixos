@@ -3,6 +3,9 @@ HOME_DEST_DIR := home/locmai/.config
 
 DIRS := waybar hypr gtk-3.0 gtk-4.0 rofi nvim
 
+default:
+	sudo nixos-rebuild --flake './nixos/#x1carbon' switch
+
 sync-local:
 	cp -rf home/locmai/.config/* ~/.config/
 	cp home/locmai/.zshrc ~/.zshrc

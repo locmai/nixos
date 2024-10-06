@@ -13,7 +13,7 @@
   networking.hostName = "nixos"; # Define your hostname.
 
   networking.networkmanager.enable = true;
-
+  time.timeZone = "Asia/Ho_Chi_Minh";
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   # Configure keymap in X11
@@ -28,6 +28,7 @@
   users.users.locmai = {
     isNormalUser = true;
     description = "Loc Mai";
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };

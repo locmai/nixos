@@ -29,9 +29,8 @@
     unzip
     wget
 
+    yazi
 
-
-    at-spi2-atk
     qt6.qtwayland
     psi-notify
     poweralertd

@@ -12,6 +12,7 @@
     gcc
     git
     gnumake
+    grim
     kitty
     neofetch
     neovim
@@ -19,6 +20,7 @@
     openssl.dev
     python3
     rustc
+    slurp
     telegram-desktop
     tmux
     tree
@@ -26,5 +28,27 @@
     slack
     unzip
     wget
+
+
+
+    at-spi2-atk
+    qt6.qtwayland
+    psi-notify
+    poweralertd
+    playerctl
+    psmisc
+    grim
+    slurp
+    imagemagick
+    swappy
+    ffmpeg_6-full
+    wl-screenrec
+    wl-clipboard
+    wl-clip-persist
+    cliphist
+    xdg-utils
+    wtype
+    wlrctl
+    gifsicle
   ];
 }

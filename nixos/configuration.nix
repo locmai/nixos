@@ -35,9 +35,10 @@
 
   i18n = {
     defaultLocale = "en_US.UTF-8";
-    enable = true;
-    type = "ibus";
-    inputMethods = {
+    inputMethod = {
+      enable = true;
+      type = "ibus";
+
       ibus.engines = with pkgs.ibus-engines; [
         bamboo
       ];

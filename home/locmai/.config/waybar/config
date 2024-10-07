@@ -50,22 +50,7 @@
         "format": "{:%h}",
     },
 
-    "battery": {
-        "states": {
-            "high": 90,
-            "upper-medium": 70,
-            "medium": 50,
-            "lower-medium": 30,
-            "low": 10,
-        },
-        "format": "{icon}{capacity}%",
-        "format-charging": "󱐋{icon}{capacity}%",
-        "format-plugged": "󰚥{icon}{capacity}%",
-        "format-time": "{H} h {M} min",
-        "format-icons": [ "󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
-        "tooltip-format": "{timeTo}",
-    },
-
+    
     "clock#calendar": {
         "format": "{:%F}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -112,9 +97,26 @@
             }
         },
     },
+    
+    "battery": {
+        "states": {
+            "high": 90,
+            "upper-medium": 70,
+            "medium": 50,
+            "lower-medium": 30,
+            "low": 10,
+        },
+        "format": "{icon}{capacity}%",
+        "format-charging": "󱐋{icon}{capacity}%",
+        "format-plugged": "󰚥{icon}{capacity}%",
+        "format-time": "{H} h {M} min",
+        "format-icons": [ "󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
+        "tooltip-format": "{timeTo}",
+    },
 
     "custom/media": {
-        "format": "{icon}󰎈",
+        "icon-spacing": 3,
+        "format": "{icon} 󰎈",
         "restart-interval": 2,
         "return-type": "json",
         "format-icons": {
@@ -122,7 +124,7 @@
             "Paused": "",
         },
         "max-length": 35,
-        "exec": "fish -c fetch_music_player_data",
+        "exec": "bash -c 'source ~/.sh_functions && fetch_music_player_data'",
         "on-click": "playerctl play-pause",
         "on-click-right": "playerctl next",
         "on-click-middle": "playerctl prev",
@@ -143,7 +145,6 @@
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t({device_battery_percentage}%)",
         "max-length": 35,
-        "on-click": "fish -c bluetooth_toggle",
         "on-click-right": "blueman-manager",
     },
 
@@ -159,8 +160,7 @@
         // "format-linked": "󰈀 {ifname} (No IP)",
         // "tooltip-format-ethernet":"Interface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\nNetmask: {netmask}\nCIDR: {cidr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>",
         "max-length": 35,
-        "on-click": "fish -c wifi_toggle",
-        "on-click-right": "wezterm start nmtui",
+        "on-click-right": "nmtui",
     },
 
     "group/misc": {
@@ -170,12 +170,6 @@
             "privacy",
             "custom/media",
         ],
-    },
-
-    "custom/webcam": {
-        "interval": 1,
-        "exec": "fish -c check_webcam",
-        "return-type": "json",
     },
 
     "privacy": {
@@ -222,8 +216,6 @@
 
     "hyprland/language": {
         "format-en": "🇺🇸 ENG (US)",
-        "format-uk": "🇺🇦 UKR",
-        "format-ru": "🇷🇺 RUS",
         "keyboard-name": "at-translated-set-2-keyboard",
         "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
     },

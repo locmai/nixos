@@ -1,7 +1,12 @@
 { pkgs, ...}:
 
 {
-  environment.sessionVariables.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+  environment.sessionVariables = {
+    PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+    EDITOR = "nvim";
+    KUBE_EDITOR = "nvim";
+  };
+
   environment.systemPackages = with pkgs; [
     avizo
     brave
@@ -28,6 +33,7 @@
     slack
     unzip
     wget
+    htop
 
     yazi
 

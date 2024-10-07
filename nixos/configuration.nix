@@ -33,6 +33,17 @@
     packages = with pkgs; [];
   };
 
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    enable = true;
+    type = "ibus";
+    inputMethods = {
+      ibus.engines = with pkgs.ibus-engines; [
+        bamboo
+      ];
+    };
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -40,12 +51,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     waybar
-    mako
+    dunst
     libnotify
     rofi-wayland
     networkmanagerapplet
-    dunst
-    brave
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

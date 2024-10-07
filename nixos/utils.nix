@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    pavucontrol
+    brave
     curl
     discord
     file
@@ -14,10 +14,12 @@
     neofetch
     neovim
     python3
+    pavucontrol
     telegram-desktop
     tmux
     tree
     ripgrep
+    slack
     unzip
     wget
   ];

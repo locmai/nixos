@@ -3,6 +3,7 @@
 {
   environment.sessionVariables.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
   environment.systemPackages = with pkgs; [
+    avizo
     brave
     curl
     discord
@@ -17,7 +18,6 @@
     openssl
     openssl.dev
     python3
-    pavucontrol
     rustc
     telegram-desktop
     tmux

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{  pkgs, ... }:
 
 {
   imports =
@@ -56,21 +56,9 @@
     libnotify
     rofi-wayland
     networkmanagerapplet
+    pamixer
+    pavucontrol
   ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-  programs = {
-    hyprland = {
-      enable = true;
-      xwayland.enable = true;
-    };
-  };
 
   xdg.portal = {
     enable = true;
@@ -81,12 +69,16 @@
   };
 
   # Sound
-  # security.rtkit.enable = true;
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
+    alsa.support32Bit = true;
     pulse.enable = true;
+    wireplumber.enable = true;
   };
+
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   services.dbus.enable = true;

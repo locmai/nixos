@@ -17,6 +17,10 @@ return {
       ensure_installed = {
        "rust_analyzer",
         "helm_ls",
+        "ruff_lsp",
+        "yamlls",
+        "gopls",
+        "nil_ls",
       },
     },
   },

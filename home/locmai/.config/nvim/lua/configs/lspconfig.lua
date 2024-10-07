@@ -1,10 +1,8 @@
 -- load defaults i.e lua_lsp
 require("nvchad.configs.lspconfig").defaults()
-local map = vim.keymap.set
 local lspconfig = require "lspconfig"
 
--- EXAMPLE
-local servers = { "html", "cssls", "rust_analyzer" }
+local servers = { "html", "cssls", "rust_analyzer" , "ruff_lsp", "nil_ls"}
 local nvlsp = require "nvchad.configs.lspconfig"
 
 

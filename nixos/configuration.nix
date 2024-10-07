@@ -23,14 +23,17 @@
   };
 
   services.xserver.enable = true;
+  programs.zsh.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.locmai = {
     isNormalUser = true;
     description = "Loc Mai";
     shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [
+      youtube-music
+      spotify
+    ];
   };
 
   i18n = {

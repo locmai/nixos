@@ -35,4 +35,3 @@ if [ -n "${ZSH_DEBUGRC+1}" ]; then
     zprof
 fi
 
-

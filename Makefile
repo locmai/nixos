@@ -19,3 +19,4 @@ sync-remote:
 	@echo "Copying zsh"	
 	@cp ~/.zshrc home/locmai/.zshrc
 	@cp ~/.p10k.zsh home/locmai/.p10k.zsh
+	@cp ~/.sh_functions home/locmai/.sh_functions

@@ -34,7 +34,15 @@ return {
       },
     },
   },
-
+  
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = {
+      view = {
+        side = "right",
+      },
+    },
+  },
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",

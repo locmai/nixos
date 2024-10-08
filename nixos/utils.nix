@@ -10,6 +10,7 @@
   environment.systemPackages = with pkgs; [
     avizo
     brave
+    colima
     curl
     discord
     file

@@ -214,6 +214,11 @@
         "max-length": 50,
     },
 
+    "ibus": {
+      "exec": "ibus engine",
+      "on-click": "ibus-setup",
+    },
+
     "hyprland/language": {
         "format-en": "🇺🇸 ENG (US)",
         "keyboard-name": "at-translated-set-2-keyboard",

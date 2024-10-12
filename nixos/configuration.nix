@@ -16,13 +16,7 @@
   time.timeZone = "Asia/Ho_Chi_Minh";
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
 
-  services.xserver.enable = true;
   programs.zsh.enable = true;
 
   users.users.locmai = {

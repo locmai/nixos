@@ -6,7 +6,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.timeout = 0;
   boot.initrd.enable = true;
-  boot.initrd.systemd.enable =true;
+  boot.initrd.systemd.enable = true;
   boot.consoleLogLevel = 3;
   boot.plymouth = {
     enable = true;

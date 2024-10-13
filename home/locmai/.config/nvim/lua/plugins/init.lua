@@ -1,11 +1,5 @@
 return {
   {
-    "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
-    opts = require "configs.conform",
-  },
-
-  {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
@@ -15,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     opts = {
       ensure_installed = {
-       "rust_analyzer",
+        "rust_analyzer",
         "helm_ls",
         "ruff_lsp",
         "yamlls",
@@ -23,6 +17,11 @@ return {
         "nil_ls",
       },
     },
+  },
+  {
+    "stevearc/conform.nvim",
+    event = 'BufWritePre', -- uncomment for format on save
+    opts = require "configs.conform",
   },
 
   {
@@ -34,7 +33,6 @@ return {
       },
     },
   },
-  
   {
     "nvim-tree/nvim-tree.lua",
     opts = {

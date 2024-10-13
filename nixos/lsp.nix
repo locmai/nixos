@@ -3,7 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     cargo
-    rust-analyzer
 
     python311Packages.python-lsp-server
     nodePackages_latest.nodemon

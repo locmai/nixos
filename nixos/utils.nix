@@ -41,6 +41,8 @@
 
     yazi
 
+    jsonnet
+    jsonnet-bundler
     qt6.qtwayland
     psi-notify
     poweralertd
@@ -59,6 +61,9 @@
     wtype
     wlrctl
     gifsicle
+
+    rust-analyzer
+    rustfmt
     (pkgs.wrapOBS {
     plugins = with pkgs.obs-studio-plugins; [
       wlrobs

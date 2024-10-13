@@ -28,6 +28,8 @@
     openssl
     openssl.dev
     python3
+    go
+    nodejs_22
     rustc
     slurp
     telegram-desktop

@@ -2,17 +2,26 @@
 require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
-local servers = { "html", "cssls", "rust_analyzer" , "ruff_lsp", "nil_ls"}
+local servers = {
+  "html",
+  "cssls",
+  "rust_analyzer",
+  "ruff_lsp",
+  "nil_ls",
+  "jsonnet_ls",
+  "yamlls",
+  "gopls",
+  "dagger",
+}
 local nvlsp = require "nvchad.configs.lspconfig"
-
 
 local function custom_on_attach(client, bufnr)
   nvlsp.on_attach(client, bufnr)
 
-  vim.keymap.set('n', 'gl', function()
+  vim.keymap.set("n", "gl", function()
     local found_float = false
     for _, win in ipairs(vim.api.nvim_list_wins()) do
-      if vim.api.nvim_win_get_config(win).relative ~= '' then
+      if vim.api.nvim_win_get_config(win).relative ~= "" then
         vim.api.nvim_win_close(win, true)
         found_float = true
       end
@@ -22,8 +31,8 @@ local function custom_on_attach(client, bufnr)
       return
     end
 
-    vim.diagnostic.open_float(nil, { focus = false, scope = 'cursor' })
-  end, { desc = 'Toggle Diagnostics' })
+    vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
+  end, { desc = "Toggle Diagnostics" })
 end
 
 -- lsps with default config

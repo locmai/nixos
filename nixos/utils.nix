@@ -11,6 +11,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    # TODO: organize these someday
     avizo
     brave
     colima

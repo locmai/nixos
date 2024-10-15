@@ -43,6 +43,7 @@
     htop
 
     yazi
+    yq
 
     jsonnet
     jsonnet-bundler

@@ -1,243 +1,40 @@
-[
-// Top Bar Config
 {
-    // Main Config
-    "name": "top_bar",
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 36, // Waybar height (to be removed for auto height)
-    "spacing": 4, // Gaps between modules (4px)
-    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
-    "modules-center": ["clock#time", "custom/separator", "clock#week", "custom/separator_dot", "clock#month", "custom/separator", "clock#calendar"],
-    "modules-right": [ "bluetooth", "network", "battery", "group/misc", "custom/logout_menu" ],
-
-    // Modules Config
-    "hyprland/workspaces": {
-        "on-click": "activate",  
-        "format": "{icon}",
-        "show-special": true,
-        "persistent-workspaces": {
-            "*": 5,  
-        },
+  "position": "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["network", "pulseaudio", "battery", "clock"],
+  "clock": {
+    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
     },
-
-    "hyprland/submap": {
-        "format": "<span color='#a6da95'>Mode:</span> {}",
-        "tooltip": false,
-    },
-
-    "clock#time": {
-        "format": "{:%I:%M %p %Ez}",
-        // "locale": "en_US.UTF-8",
-        // "timezones": [ "Europe/Kyiv", "America/New_York" ],
-    },
-
-    "custom/separator": {
-        "format": "|",
-        "tooltip": false,
-    },
-
-    "custom/separator_dot": {
-        "format": "•",
-        "tooltip": false,
-    },
-
-    "clock#week": {
-        "format": "{:%a}",
-    },
-
-    "clock#month": {
-        "format": "{:%h}",
-    },
-
-    
-    "clock#calendar": {
-        "format": "{:%F}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "actions": {
-            "on-click-right": "mode",
-        },
-        "calendar": {
-            "mode"          : "month",
-            "mode-mon-col"  : 3,
-            "weeks-pos"     : "right",
-            "on-scroll"     : 1,
-            "on-click-right": "mode",
-            "format": {
-                "months":     "<span color='#f4dbd6'><b>{}</b></span>",
-                "days":       "<span color='#cad3f5'><b>{}</b></span>",
-                "weeks":      "<span color='#c6a0f6'><b>W{}</b></span>",
-                "weekdays":   "<span color='#a6da95'><b>{}</b></span>",
-                "today":      "<span color='#8bd5ca'><b><u>{}</u></b></span>"
-            }
-        },
-    },
-
-    "clock": {
-        "format": "{:%I:%M %p %Ez | %a • %h | %F}",
-        "format-alt": "{:%I:%M %p}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        // "locale": "en_US.UTF-8",
-        // "timezones": [ "Europe/Kyiv", "America/New_York" ],
-        "actions": {
-            "on-click-right": "mode",
-        },
-        "calendar": {
-            "mode"          : "month",
-            "mode-mon-col"  : 3,
-            "weeks-pos"     : "right",
-            "on-scroll"     : 1,
-            "on-click-right": "mode",
-            "format": {
-                "months":     "<span color='#f4dbd6'><b>{}</b></span>",
-                "days":       "<span color='#cad3f5'><b>{}</b></span>",
-                "weeks":      "<span color='#c6a0f6'><b>W{}</b></span>",
-                "weekdays":   "<span color='#a6da95'><b>{}</b></span>",
-                "today":      "<span color='#8bd5ca'><b><u>{}</u></b></span>"
-            }
-        },
-    },
-    
-    "battery": {
-        "states": {
-            "high": 90,
-            "upper-medium": 70,
-            "medium": 50,
-            "lower-medium": 30,
-            "low": 10,
-        },
-        "format": "{icon}{capacity}%",
-        "format-charging": "󱐋{icon}{capacity}%",
-        "format-plugged": "󰚥{icon}{capacity}%",
-        "format-time": "{H} h {M} min",
-        "format-icons": [ "󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
-        "tooltip-format": "{timeTo}",
-    },
-
-    "custom/media": {
-        "icon-spacing": 3,
-        "format": "{icon} 󰎈",
-        "restart-interval": 2,
-        "return-type": "json",
-        "format-icons": {
-            "Playing": "",
-            "Paused": "",
-        },
-        "max-length": 35,
-        "exec": "bash -c 'source ~/.sh_functions && fetch_music_player_data'",
-        "on-click": "playerctl play-pause",
-        "on-click-right": "playerctl next",
-        "on-click-middle": "playerctl prev",
-        "on-scroll-up": "playerctl volume 0.05-",
-        "on-scroll-down": "playerctl volume 0.05+",
-        "smooth-scrolling-threshold": "0.1",
-    },
-
-    "bluetooth": {
-        "format": "󰂯",
-        "format-disabled": "󰂲",
-        "format-connected": "󰂱 {device_alias}",
-        "format-connected-battery": "󰂱 {device_alias} (󰥉 {device_battery_percentage}%)",
-        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
-        "tooltip-format": "{controller_alias}\t{controller_address} ({status})\n\n{num_connections} connected",
-        "tooltip-format-disabled": "bluetooth off",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address} ({status})\n\n{num_connections} connected\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t({device_battery_percentage}%)",
-        "max-length": 35,
-        "on-click-right": "blueman-manager",
-    },
-
-    "network": {
-        "format": "󰤭",
-        "format-wifi": "{icon}  ({signalStrength}%) {essid}",
-        "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ],
-        "format-disconnected": "󰤫  Disconnected",
-        "tooltip-format": "wifi <span color='#ee99a0'>off</span>",
-        "tooltip-format-wifi":"SSID: {essid}({signalStrength}%), {frequency} MHz\nInterface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>",
-        "tooltip-format-disconnected": "<span color='#ed8796'>disconnected</span>",
-        // "format-ethernet": "󰈀 {ipaddr}/{cidr}",
-        // "format-linked": "󰈀 {ifname} (No IP)",
-        // "tooltip-format-ethernet":"Interface: {ifname}\nIP: {ipaddr}\nGW: {gwaddr}\nNetmask: {netmask}\nCIDR: {cidr}\n\n<span color='#a6da95'>{bandwidthUpBits}</span>\t<span color='#ee99a0'>{bandwidthDownBits}</span>\t<span color='#c6a0f6'>󰹹{bandwidthTotalBits}</span>",
-        "max-length": 35,
-        "on-click-right": "nmtui",
-    },
-
-    "group/misc": {
-        "orientation": "horizontal",
-        "modules": [
-            "custom/webcam",
-            "privacy",
-            "custom/media",
-        ],
-    },
-
-    "privacy": {
-        "icon-spacing": 1,
-        "icon-size": 12,
-        "transition-duration": 250,
-        "modules": [
-            {
-                "type": "audio-in",
-            },
-            {
-                "type": "screenshare",
-            },
-        ]
-    },
-
-    "custom/logout_menu": {
-        "return-type": "json",
-        "exec": "echo '{ \"text\":\" 󰌾 \", \"tooltip\": \"Lock screen\" }'",
-        "interval": "once",
-        "on-click": "hyprlock",
-    },
- 
-},
-
-
-// Bottom Bar Config
-{
-    // Main Config
-    "name": "bottom_bar",
-    "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 36, // Waybar height (to be removed for auto height)
-    "spacing": 4, // Gaps between modules (4px)
-    "modules-left": ["user"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["keyboard-state", "hyprland/language"],
-
-    // Modules Config
-    "hyprland/window": {
-        "format": "{title}",
-        "max-length": 50,
-    },
-
-    "ibus": {
-      "exec": "ibus engine",
-      "on-click": "ibus-setup",
-    },
-
-    "hyprland/language": {
-        "format-en": "🇺🇸 ENG (US)",
-        "keyboard-name": "at-translated-set-2-keyboard",
-        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
-    },
-
-    "keyboard-state": {
-        "capslock": true,
-        // "numlock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-
-    "user": {
-        "format": " <span color='#8bd5ca'>{user}</span> (up <span color='#f5bde6'>{work_d} d</span> <span color='#8aadf4'>{work_H} h</span> <span color='#eed49f'>{work_M} min</span> <span color='#a6da95'>↑</span>)",
-        "icon": true,
-    },
-},
-]
+    "format": "<span size='13000' foreground='#a6e3a1'>{icon} </span> {capacity}%",
+    "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {capacity}%",
+    "format-critical": "<span size='13000' foreground='#E38C8F'>{icon} </span> {capacity}%",
+    "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {time}",
+    "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{time}"
+  },
+  "network": {
+    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
+    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+  },
+  "pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "format-muted": "",
+      "format-icons": {
+          "default": ["", "", " "]
+      },
+      "on-click": "pavucontrol"
+  }
+}

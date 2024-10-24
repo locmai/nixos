@@ -1,18 +1,30 @@
 configuration{
-    modi: "drun";
-    icon-theme: "Numix-Circle";
-    font: "JetBrains Mono Regular 13";
+    modi: ["drun", "window", "run"];
+    icon-theme: "Papirus-Dark";
     show-icons: true;
-    terminal: "wezterm";
+    terminal: "alacritty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
-    hide-scrollbar: true;
-    display-drun: "   Apps ";
-    sidebar-mode: true;
-    border-radius: 10;
+    sidebar-mode: false;
+    display-drun: " ";
+    display-run: " ";
+    display-window: " ";
+    
+    //adding vim keybindings
+    kb-row-up: "Up,Control+k";
+    kb-row-left: "Left,Control+h";
+    kb-row-right: "Right,Control+l";
+    kb-row-down: "Down,Control+j";
+
+    kb-accept-entry: "Control+z,Control+y,Return,KP_Enter";
+
+    //fixing up
+    kb-remove-to-eol: "";
+    kb-move-char-back: "Control+b";
+    kb-remove-char-back: "BackSpace";
+    kb-move-char-forward: "Control+f";
+    kb-mode-complete: "Control+o";
 }
 
-//@theme "~/.config/rofi/themes/catppuccin-macchiato.rasi"
-
-@theme "/nix/store/w4xrwdaijpf2f7rl275n3swkfllgk8fs-rofi-1.7.5+wayland3/share/rofi/themes/Arc-Dark.rasi"
+@theme "~/.config/rofi/themes/tokyonight.rasi"

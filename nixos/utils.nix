@@ -14,6 +14,7 @@
     # TODO: organize these someday
     avizo
     brave
+    google-chrome
     colima
     curl
     discord

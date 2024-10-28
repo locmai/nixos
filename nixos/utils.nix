@@ -43,6 +43,8 @@
     wget
     htop
 
+    pinentry-curses
+    gnupg
     yazi
     yq
 

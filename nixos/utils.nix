@@ -11,73 +11,41 @@
   };
 
   environment.systemPackages = with pkgs; [
-    # TODO: organize these someday
-    avizo
-    brave
-    google-chrome
-    colima
     curl
-    discord
     file
     fzf
     gcc
-    git
     gnumake
+    gnupg
     grim
-    kitty
+    htop
     neofetch
-    neovim
     openssl
     openssl.dev
-    python3
-    go
-    nodejs_22
-    rustc
-    slurp
-    telegram-desktop
-    tmux
-    tree
+    pinentry-curses
     ripgrep
-    slack
+    tree
     unzip
     wget
-    htop
 
-    pinentry-curses
-    gnupg
-    yazi
-    yq
-
+    # jq/yq
     jsonnet
     jsonnet-bundler
-    qt6.qtwayland
-    psi-notify
-    poweralertd
-    playerctl
-    psmisc
-    grim
-    slurp
+    jq
+    yq
+
+    
+    # Image/clipboard/screenshot
+    cliphist
+    ffmpeg_6-full
+    gifsicle
     imagemagick
     swappy
-    ffmpeg_6-full
     wl-screenrec
     wl-clipboard
     wl-clip-persist
-    cliphist
-    xdg-utils
     wtype
     wlrctl
-    gifsicle
-
-    rust-analyzer
-    rustfmt
-    nixfmt-rfc-style
-    (pkgs.wrapOBS {
-      plugins = with pkgs.obs-studio-plugins; [
-        wlrobs
-        obs-backgroundremoval
-        obs-pipewire-audio-capture
-      ];
-    })
+    xdg-utils
   ];
 }

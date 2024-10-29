@@ -36,6 +36,8 @@
             ./kubernetes.nix
             ./theme.nix
             ./lsp.nix
+            ./miscs.nix
+            ./notifications.nix
             ./programs.nix
             ./utils.nix
             ./virtualisation.nix

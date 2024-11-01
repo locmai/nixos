@@ -12,6 +12,7 @@ local servers = {
   "yamlls",
   "gopls",
   "dagger",
+  "terraformls"
 }
 local nvlsp = require "nvchad.configs.lspconfig"
 

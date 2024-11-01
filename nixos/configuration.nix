@@ -9,6 +9,7 @@
   networking.hostName = "nixos";
 
   networking.networkmanager.enable = true;
+
   time.timeZone = "Asia/Ho_Chi_Minh";
 
   nix.settings.experimental-features = [
@@ -35,7 +36,6 @@
     ];
     packages = with pkgs; [
       youtube-music
-      spotify
     ];
   };
 
@@ -43,10 +43,13 @@
     defaultLocale = "en_US.UTF-8";
     inputMethod = {
       enable = true;
-      type = "ibus";
-
-      ibus.engines = with pkgs.ibus-engines; [
-        bamboo
+      type = "fcitx5";
+      fcitx5.addons = with pkgs; [
+        fcitx5-gtk
+        fcitx5-configtool
+        fcitx5-with-addons
+        fcitx5-m17n
+        fcitx5-unikey
       ];
     };
   };

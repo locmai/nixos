@@ -11,6 +11,7 @@ Please note that this setup is not (yet) minimalistic, lightweight, or fully opt
 
 - **Distro**: NixOS
 - **Terminal**: Kitty
+- **Shell**: Zsh
 - **Display server**: Wayland
 - **Window manager**: Hyprland
 - **Bar**: Waybar

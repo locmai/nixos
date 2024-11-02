@@ -9,6 +9,7 @@
     gnumake
     gnupg
     grim
+    slurp
     htop
     neofetch
     openssl

@@ -49,7 +49,6 @@
         fcitx5-configtool
         fcitx5-with-addons
         fcitx5-m17n
-        fcitx5-unikey
       ];
     };
   };

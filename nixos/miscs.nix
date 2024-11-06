@@ -1,11 +1,9 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   environment.sessionVariables = {
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
     EDITOR = "nvim";
     KUBE_EDITOR = "nvim";
-    GPG_TTY="$(tty)";
+    GPG_TTY = "$(tty)";
   };
 
   environment.systemPackages = with pkgs; [
@@ -21,6 +19,7 @@
     nodejs_22
     rustc
     tmux
+    tree-sitter
     slack
     pinentry-curses
     yazi

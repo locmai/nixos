@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     cargo
 
+    alejandra
     python311Packages.python-lsp-server
     nodePackages_latest.nodemon
     nodePackages_latest.typescript

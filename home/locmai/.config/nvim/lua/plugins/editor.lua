@@ -12,6 +12,14 @@ return {
     },
   },
   {
+    "neo-tree-vim/neo-tree.nvim",
+    opts = {
+      window = {
+        position = "right",
+      },
+    },
+  },
+  {
     "telescope.nvim",
     dependencies = {
       {

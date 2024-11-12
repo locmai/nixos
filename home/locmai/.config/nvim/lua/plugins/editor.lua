@@ -12,13 +12,14 @@ return {
     },
   },
   {
-    "neo-tree-vim/neo-tree.nvim",
+    "nvim-neo-tree/neo-tree.nvim",
     opts = {
       window = {
         position = "right",
       },
     },
   },
+  { "github/copilot.vim" },
   {
     "telescope.nvim",
     dependencies = {

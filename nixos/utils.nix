@@ -1,7 +1,6 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    btop
     curl
     file
     fzf
@@ -26,7 +25,6 @@
     jq
     yq
 
-    
     # Image/clipboard/screenshot
     cliphist
     ffmpeg_6-full

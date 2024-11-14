@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   virtualisation = {
     podman = {
       enable = true;
@@ -20,5 +18,6 @@
     distrobox
     podman-compose
     qemu
+    trivy
   ];
 }

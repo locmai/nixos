@@ -9,6 +9,7 @@
   environment.systemPackages = with pkgs; [
     # browser/terminal/message apps
     brave
+    firefox
     google-chrome
     kitty
     neofetch

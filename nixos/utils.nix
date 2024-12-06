@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    # utils
     btop
     curl
     file
@@ -19,13 +20,13 @@
     unzip
     wget
 
-    # jq/yq
+    # jq/yq/json
     jsonnet
     jsonnet-bundler
     jq
     yq
 
-    # Image/clipboard/screenshot
+    # image/clipboard/screenshot
     cliphist
     ffmpeg_6-full
     gifsicle

@@ -14,7 +14,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    colima
     distrobox
     podman-compose
     qemu

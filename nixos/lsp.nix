@@ -19,6 +19,7 @@
     nil
     zls
     gopls
+    jsonfmt
     delve
     emmet-language-server
     buf

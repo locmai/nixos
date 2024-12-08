@@ -1,9 +1,12 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    cargo
-
+    # Nix
     alejandra
-    python311Packages.python-lsp-server
+
+    # Python
+    ruff-lsp
+
+    # NodeJS
     nodePackages_latest.nodemon
     nodePackages_latest.typescript
     nodePackages_latest.typescript-language-server
@@ -12,8 +15,11 @@
     nodePackages_latest.dockerfile-language-server-nodejs
     nodePackages_latest.bash-language-server
     nodePackages_latest.graphql-language-service-cli
+
+    # Vue
     vue-language-server
-    sumneko-lua-language-server
+
+    # Misc
     marksman
     markdown-oxide
     nil

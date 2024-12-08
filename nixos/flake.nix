@@ -36,6 +36,7 @@
           ./lsp.nix
           ./miscs.nix
           ./notifications.nix
+          ./programmings.nix
           ./utils.nix
           ./virtualisation.nix
           nixos-hardware.nixosModules.lenovo-thinkpad-x1-10th-gen

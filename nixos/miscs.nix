@@ -18,16 +18,12 @@
     git
     go
     nodejs_22
-    rustc
     tmux
     tree-sitter
     slack
     pinentry-curses
     yazi
     qt6.qtwayland
-    rust-analyzer
-    rustfmt
-    nixfmt-rfc-style
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs

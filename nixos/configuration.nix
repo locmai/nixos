@@ -15,15 +15,20 @@
     "flakes"
   ];
 
-  programs.nix-ld.enable = true;
-  programs.zsh = {
-    enable = true;
-    shellInit = ''
-      export NIX_LD=$(nix eval --impure --raw --expr 'let pkgs = import <nixpkgs> {}; NIX_LD = pkgs.lib.fileContents "${pkgs.stdenv.cc}/nix-support/dynamic-linker"; in NIX_LD')
-    '';
+  programs = {
+    nix-ld.enable = true;
+    zsh = {
+      enable = true;
+      shellInit = ''
+        export NIX_LD=$(nix eval --impure --raw --expr 'let pkgs = import <nixpkgs> {}; NIX_LD = pkgs.lib.fileContents "${pkgs.stdenv.cc}/nix-support/dynamic-linker"; in NIX_LD')
+      '';
+    };
+    direnv = {
+      enable = true;
+      silent = true;
+    };
   };
-
-  # TODO update user per host later when new ones added
+  # TODO update user per host when new ones are added
   users.users.locmai = {
     isNormalUser = true;
     description = "Loc Mai";
@@ -42,12 +47,45 @@
     inputMethod = {
       enable = true;
       type = "fcitx5";
-      fcitx5.addons = with pkgs; [
-        fcitx5-gtk
-        fcitx5-configtool
-        fcitx5-with-addons
-        fcitx5-m17n
-      ];
+      fcitx5 = {
+        waylandFrontend = true;
+        addons = with pkgs; [
+          fcitx5-gtk
+          fcitx5-configtool
+          fcitx5-with-addons
+          fcitx5-bamboo
+        ];
+        settings = {
+          inputMethod = {
+            "Groups/0" = {
+              "Name" = "Default";
+              "Default Layout" = "us";
+              "DefaultIM" = "keyboard-us";
+            };
+            "Groups/0/Items/0" = {
+              "Name" = "keyboard-us";
+            };
+            "Groups/0/Items/1" = {
+              "Name" = "bamboo";
+            };
+          };
+          globalOptions = {
+            "Behavior" = {
+              "ShowInputMethodInformation" = "False";
+            };
+            "Hotkey/EnumerateForwardKeys" = {
+              "0" = "Alt+Shift+Ctrl";
+            };
+          };
+          addons = {
+            bamboo = {
+              globalSection = {
+                InputMethod = "Telex 2";
+              };
+            };
+          };
+        };
+      };
     };
   };
 

@@ -16,6 +16,6 @@
     hyprlock
     hypridle
     hyprpaper
-    hyprland-qtutils
+    hyprland-qtutils.packages."${pkgs.system}".default
   ];
 }

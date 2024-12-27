@@ -21,3 +21,6 @@ sync-remote:
 	@cp ~/.p10k.zsh home/locmai/.p10k.zsh
 	@cp ~/.sh_functions home/locmai/.sh_functions
 	@cp ~/.gnupg/gpg-agent.conf home/locmai/.gnupg/gpg-agent.conf
+
+update:
+	nix flake update --flake ./nixos/

@@ -39,6 +39,8 @@ return {
         rust = { "rustfmt", lsp_format = "fallback" },
         hcl = { "hclfmt" },
         nix = { "alejandra" },
+        go = { "gofmt", "goimports" },
+        json = { "json_tool" },
       },
     },
   },
@@ -46,7 +48,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     -- A list of parser names, or "all" (the listed parsers MUST always be installed)
     ensure_installed = {
-      "g",
+      "go",
       "lua",
       "vim",
       "vimdoc",

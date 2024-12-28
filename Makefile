@@ -1,7 +1,7 @@
 HOME_SRC_DIR := ~/.config
 HOME_DEST_DIR := home/locmai/.config
 
-DIRS := waybar hypr gtk-3.0 gtk-4.0 rofi nvim dunst kitty ibus
+DIRS := waybar hypr gtk-3.0 gtk-4.0 rofi nvim dunst kitty yazi
 
 default:
 	sudo nixos-rebuild --flake './nixos/#x1carbon' switch

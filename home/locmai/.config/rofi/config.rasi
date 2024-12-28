@@ -28,3 +28,4 @@ configuration{
 }
 
 @theme "~/.config/rofi/themes/tokyonight.rasi"
+

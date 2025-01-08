@@ -32,4 +32,4 @@ if [ -n "${ZSH_DEBUGRC+1}" ]; then
     zprof
 fi
 
-PATH=~/go/bin:$PATH
+PATH=~/go/bin:$PATH:~/.cargo/bin/

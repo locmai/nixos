@@ -127,5 +127,5 @@
   services.dbus.enable = true;
   services.udev.enable = true;
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 }

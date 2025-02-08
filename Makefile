@@ -24,3 +24,6 @@ sync-remote:
 
 update:
 	nix flake update --flake ./nixos/
+
+verify-nix-store:
+	sudo nix-store --verify --check-contents --repair

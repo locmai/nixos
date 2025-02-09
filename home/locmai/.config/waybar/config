@@ -4,7 +4,7 @@
   "modules-center": ["hyprland/window"],
   "modules-right": ["network", "pulseaudio", "battery", "clock"],
   "clock": {
-    "format": " {:%a %d %H:%M}",
+    "format": "  {:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
@@ -12,25 +12,25 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon} {capacity}%",
-    "format-warning": "{icon} {capacity}%",
-    "format-critical": "{icon} {capacity}%",
+    "format": "{icon}  {capacity}%",
+    "format-warning": "{icon}  {capacity}%",
+    "format-critical": "{icon}  {capacity}%",
     "format-charging": "  {capacity}%",
     "format-plugged": "  {capacity}%",
-    "format-alt": "{icon} {time}",
-    "format-full": "{icon} {capacity}%",
+    "format-alt": "{icon}  {time}",
+    "format-full": "{icon}  {capacity}%",
     "format-icons": ["", "", "", "", ""],
     "tooltip-format": "{time}"
   },
   "network": {
-    "format-wifi": "  {essid}",
-    "format-ethernet": "󰤭  Disconnected",
+    "format-wifi": "   {essid}",
+    "format-ethernet": "󰤭   Disconnected",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "  Disconnected",
+    "format-disconnected": "   Disconnected",
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
   },
   "pulseaudio": {
-      "format": "{icon} {volume}%",
+      "format": "{icon}  {volume}%",
       "format-muted": "",
       "format-icons": {
           "default": ["", "", " "]

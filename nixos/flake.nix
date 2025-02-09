@@ -46,6 +46,9 @@
           ./programmings.nix
           ./utils.nix
           ./virtualisation.nix
+
+          ./material-you.nix
+
           nixos-hardware.nixosModules.lenovo-thinkpad-x1-10th-gen
           home-manager.nixosModules.home-manager
         ];

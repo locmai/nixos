@@ -21,6 +21,12 @@ Please note that this setup is not (yet) minimalistic, lightweight, or fully opt
 - **Browser**: Brave
 - **Screenshot**: Grim + Slurp 
 
+
+![desktop](home/locmai/Pictures/Screenshots/startup.png)
+
+![utilities](home/locmai/Pictures/Screenshots/utilities.png)
+
+
 ## TODOs
 
 - Configure dotfiles (home manager or chezmoi?)

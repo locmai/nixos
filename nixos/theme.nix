@@ -1,5 +1,6 @@
 {pkgs, ...}: {
-  environment.variables.GTK_THEME = "catppuccin-macchiato-teal-standard";
+  # environment.variables.GTK_THEME = "catppuccin-macchiato-teal-standard";
+  environment.variables.GTK_THEME = "Gruvbox-Dark-BL-LB";
   environment.variables.XCURSOR_THEME = "Catppuccin-Macchiato-Teal";
   environment.variables.XCURSOR_SIZE = "24";
   environment.variables.HYPRCURSOR_THEME = "Catppuccin-Macchiato-Teal";
@@ -49,5 +50,7 @@
     catppuccin-gtk
     catppuccin-kvantum
     catppuccin-cursors.macchiatoTeal
+
+    gruvbox-gtk-theme
   ];
 }

@@ -27,9 +27,4 @@ configuration{
     kb-mode-complete: "Control+o";
 }
 
-//@theme "~/.config/rofi/themes/tokyonight.rasi"
-
-
-//@theme "/nix/store/xcfia1n9h67jj4wks2kicw6xm1alj0q0-rofi-1.7.5+wayland3/share/rofi/themes/sidebar.rasi"
-
-@theme "/nix/store/xcfia1n9h67jj4wks2kicw6xm1alj0q0-rofi-1.7.5+wayland3/share/rofi/themes/Arc.rasi"
+@theme "gruvbox-material"

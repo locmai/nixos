@@ -30,6 +30,5 @@ Please note that this setup is not (yet) minimalistic, lightweight, or fully opt
 ## TODOs
 
 - Configure dotfiles (home manager or chezmoi?)
-- Refactor the code and split modules
-- Unify the color scheme and theme across all components
+- Unify the gruvbox colorscheme across all components
 - Fix `fcitx5` input method

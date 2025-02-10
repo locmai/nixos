@@ -31,5 +31,8 @@
         obs-pipewire-audio-capture
       ];
     })
+
+    # Test programs
+    # kdePackages.dolphin
   ];
 }

@@ -1,17 +1,35 @@
-{ pkgs, ... }:
+{pkgs, ...}: {
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      systemd-boot.configurationLimit = 2;
+      efi.canTouchEfiVariables = true;
+      timeout = 0;
+    };
+    initrd.enable = true;
+    initrd.systemd.enable = true;
+    consoleLogLevel = 0;
 
-{
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.configurationLimit = 2;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.timeout = 0;
-  boot.initrd.enable = true;
-  boot.initrd.systemd.enable = true;
-  boot.consoleLogLevel = 3;
-  boot.plymouth = {
-    enable = true;
-    font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
-    themePackages = [ pkgs.catppuccin-plymouth ];
-    theme = "catppuccin-macchiato";
+    kernelParams = [
+      "quiet"
+      "splash"
+      "boot.shell_on_fail"
+      "loglevel=3"
+      "rd.systemd.show_status=false"
+      "rd.udev.log_level=3"
+      "udev.log_priority=3"
+    ];
+
+    plymouth = {
+      enable = true;
+      font = "${pkgs.nerdfonts}/share/fonts/truetype/NerdFonts/FiraCodeNerdFont-Regular.ttf";
+      # themePackages = [pkgs.catppuccin-plymouth];
+      themePackages = with pkgs; [
+        (adi1090x-plymouth-themes.override {
+          selected_themes = ["deus_ex"];
+        })
+      ];
+      theme = "deus_ex";
+    };
   };
 }

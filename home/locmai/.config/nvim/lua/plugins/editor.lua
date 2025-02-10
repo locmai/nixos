@@ -19,5 +19,6 @@ return {
       },
     },
   },
+  { "MeanderingProgrammer/render-markdown.nvim" },
   { "github/copilot.vim" },
 }

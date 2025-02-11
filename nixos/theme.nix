@@ -6,8 +6,8 @@
   # environment.variables.HYPRCURSOR_THEME = "Catppuccin-Macchiato-Teal";
   environment.variables.HYPRCURSOR_SIZE = "24";
   qt.enable = true;
-  qt.platformTheme = "kde";
-  qt.style = "kvantum";
+  qt.platformTheme = "gtk2";
+  qt.style = "adwaita-dark";
   console = {
     earlySetup = true;
     colors = [

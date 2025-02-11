@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     # Rust
     cargo
+    cargo-generate
     rustc
     rust-analyzer
     rustfmt

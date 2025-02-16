@@ -12,6 +12,7 @@ sync-local:
 	cp home/locmai/.p10k.zsh ~/.p10k.zsh
 
 sync-remote:
+	@rm -rf $(HOME_DEST_DIR)
 	@for dir in $(DIRS); do \
         	echo "Copying $$dir from $(HOME_SRC_DIR) to $(HOME_DEST_DIR)"; \
         	cp -r $(HOME_SRC_DIR)/$$dir $(HOME_DEST_DIR); \

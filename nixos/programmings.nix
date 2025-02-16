@@ -18,5 +18,8 @@
 
     # Terraform/HCL
     hclfmt
+
+    # NodeJS
+    nodejs_23
   ];
 }

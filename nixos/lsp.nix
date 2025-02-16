@@ -6,15 +6,10 @@
     # Python
     ruff-lsp
 
-    # NodeJS
-    nodePackages_latest.nodemon
-    nodePackages_latest.typescript
-    nodePackages_latest.typescript-language-server
     nodePackages_latest.vscode-langservers-extracted
     nodePackages_latest.yaml-language-server
     nodePackages_latest.dockerfile-language-server-nodejs
     nodePackages_latest.bash-language-server
-    nodePackages_latest.graphql-language-service-cli
 
     # Vue
     vue-language-server

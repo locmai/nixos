@@ -17,7 +17,6 @@
     python3
     git
     go
-    nodejs_22
     tmux
     tree-sitter
     slack

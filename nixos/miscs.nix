@@ -23,6 +23,7 @@
     pinentry-curses
     yazi
     qt6.qtwayland
+    libsForQt5.qt5.qttools
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs

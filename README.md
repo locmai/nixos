@@ -32,3 +32,4 @@ Please note that this setup is not (yet) minimalistic, lightweight, or fully opt
 - Configure dotfiles (home manager or chezmoi?)
 - Unify the gruvbox colorscheme across all components
 - Fix `fcitx5` input method
+- Fix the waybar's top/right modules where they are a little bit weird with icons

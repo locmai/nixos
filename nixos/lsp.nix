@@ -6,6 +6,8 @@
     # Python
     ruff-lsp
 
+    # NodeJS
+    typescript-language-server
     nodePackages_latest.vscode-langservers-extracted
     nodePackages_latest.yaml-language-server
     nodePackages_latest.dockerfile-language-server-nodejs

@@ -21,5 +21,7 @@
 
     # NodeJS
     nodejs_23
+    nodePackages_latest.webpack
+    nodePackages_latest.webpack-cli
   ];
 }

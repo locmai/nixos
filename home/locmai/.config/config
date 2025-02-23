@@ -30,7 +30,7 @@
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
   },
   "pulseaudio": {
-      "format": "{icon}  {volume}%",
+      "format": "{icon}",
       "format-muted": "",
       "format-icons": {
           "default": ["", "", " "]

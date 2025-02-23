@@ -41,6 +41,7 @@ return {
         nix = { "alejandra" },
         go = { "gofmt", "goimports" },
         json = { "json_tool" },
+        tf = { "tofu fmt" },
       },
     },
   },

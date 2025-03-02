@@ -6,6 +6,7 @@
     rustc
     rust-analyzer
     rustfmt
+    rustup
 
     # Nix
     nixfmt-rfc-style

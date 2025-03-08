@@ -125,6 +125,7 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+  programs.ssh.startAgent = true;
   services.dbus.enable = true;
   services.udev.enable = true;
 

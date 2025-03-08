@@ -68,6 +68,32 @@
         "key": "space s g",
         "command": "workbench.action.findInFiles",
         "when": "vim.mode != 'Insert'"
+    },
+    {
+        "key": "space `",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "vim.mode != 'Insert'"
+    },
+    {
+        "key": "space c",
+         "command": "runCommands",
+         "args": {
+            "commands": [
+                "workbench.action.toggleAuxiliaryBar",
+                "chat.action.focus"
+            ]
+         },
+        "when": "!auxiliaryBarFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "space c",
+         "command": "runCommands",
+         "args": {
+            "commands": [
+                "workbench.action.toggleAuxiliaryBar",
+                "workbench.action.focusLastEditorGroup"
+            ]
+         },
+        "when": "auxiliaryBarFocus && vim.mode != 'Insert'"
     }
-
 ]

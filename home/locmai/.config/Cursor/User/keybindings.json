@@ -1,0 +1,73 @@
+[
+    {
+        "key": ";",
+        "command": "type",
+        "args": {
+            "text": ":"
+        },
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "space e",
+        "command": "runCommands",
+        "args": {
+          "commands": [
+            "workbench.action.toggleSidebarVisibility",
+            "workbench.view.explorer"
+          ]
+        },
+        "when": "editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "g d",
+        "command": "editor.action.goToTypeDefinition",
+        "when": "editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "g D",
+        "command": "editor.action.goToDeclaration",
+        "when": "editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "g i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "g c c",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "space g b",
+        "command": "gitlens.toggleFileBlame",
+        "when": "editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "space e",
+        "command": "runCommands",
+        "args": {
+          "commands": [
+            "workbench.action.toggleSidebarVisibility",
+            "workbench.action.focusLastEditorGroup"
+          ]
+        },
+        "when": "(filesExplorerFocus || sideBarFocus) && vim.mode != 'Insert'"
+    },
+    {
+        "key": "space space",
+        "command": "workbench.action.quickOpen",
+        "when": "vim.mode != 'Insert'"
+    },
+    {
+        "key": "space f f",
+        "command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+        "when": "vim.mode != 'Insert'"
+    },
+    {
+        "key": "space s g",
+        "command": "workbench.action.findInFiles",
+        "when": "vim.mode != 'Insert'"
+    }
+
+]

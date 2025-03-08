@@ -22,6 +22,9 @@ sync-remote:
 	@cp ~/.p10k.zsh home/locmai/.p10k.zsh
 	@cp ~/.sh_functions home/locmai/.sh_functions
 	@cp ~/.gnupg/gpg-agent.conf home/locmai/.gnupg/gpg-agent.conf
+	@mkdir -p home/locmai/.config/Cursor/User
+	@cp ~/.config/Cursor/User/keybindings.json home/locmai/.config/Cursor/User/keybindings.json
+	@cp ~/.config/Cursor/User/settings.json home/locmai/.config/Cursor/User/settings.json
 
 update:
 	nix flake update --flake ./nixos/

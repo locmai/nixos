@@ -20,16 +20,18 @@ Please note that this setup is not (yet) minimalistic, lightweight, or fully opt
 - **File manager**: Yazi
 - **Browser**: Brave
 - **Screenshot**: Grim + Slurp 
+- **Colorscheme**: Gruvbox
 
 
 ![desktop](home/locmai/Pictures/Screenshots/startup.png)
 
 ![utilities](home/locmai/Pictures/Screenshots/utilities.png)
 
+## Experimentals
+
+The components under the `./nixos/experimentals/` directory are not yet fully tested and may not stay there for long.
 
 ## TODOs
 
 - Configure dotfiles (home manager or chezmoi?)
-- Unify the gruvbox colorscheme across all components
 - Fix `fcitx5` input method
-- Fix the waybar's top/right modules where they are a little bit weird with icons

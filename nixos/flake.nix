@@ -49,6 +49,10 @@
           ./virtualisation.nix
           nixos-hardware.nixosModules.lenovo-thinkpad-x1-10th-gen
           home-manager.nixosModules.home-manager
+
+          # Unsustainable modules
+          ./experimentals/azure.nix
+          ./experimentals/playground.nix
         ];
       };
     };

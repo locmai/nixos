@@ -95,5 +95,40 @@
             ]
          },
         "when": "auxiliaryBarFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "space t",
+        "command": "workbench.action.navigateback",
+        "when": "vim.mode != 'Insert'"
+    },
+    {
+        "key": "space a",
+        "command": "vscode-harpoon.addEditor",
+        "when": "vim.mode != 'Insert'"
+    },
+    {
+        "key": "space h",
+        "command": "vscode-harpoon.editorQuickPick",
+        "when": "vim.mode != 'Insert'"
+    },
+    {
+        "key": "space 1",
+        "command": "vscode-harpoon.gotoEditor1",
+        "when": "vim.mode != 'Insert'"
+    },
+    {
+        "key": "space 2",
+        "command": "vscode-harpoon.gotoEditor2",
+        "when": "vim.mode != 'Insert'"
+    },
+    {
+        "key": "space 3",
+        "command": "vscode-harpoon.gotoEditor3",
+        "when": "vim.mode != 'Insert'"
+    },
+    {
+        "key": "space 4",
+        "command": "vscode-harpoon.gotoEditor4",
+        "when": "vim.mode != 'Insert'"
     }
 ]

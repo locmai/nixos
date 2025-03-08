@@ -1,5 +1,9 @@
 {
     "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.sideBar.location": "left",
+    "workbench.editor.showTabs": "none",
     "window.commandCenter": false,
-    "workbench.sideBar.location": "left"
+    "vim.sneak": true,
+    "vim.leader": "<space>",
+    "vim.smartRelativeLine": true
 }

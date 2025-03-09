@@ -57,22 +57,22 @@
     {
         "key": "space space",
         "command": "workbench.action.quickOpen",
-        "when": "vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.mode != 'Insert'"
     },
     {
         "key": "space f f",
         "command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
-        "when": "vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.mode != 'Insert'"
     },
     {
         "key": "space s g",
         "command": "workbench.action.findInFiles",
-        "when": "vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.mode != 'Insert'"
     },
     {
         "key": "space `",
         "command": "workbench.action.terminal.toggleTerminal",
-        "when": "vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.mode != 'Insert'"
     },
     {
         "key": "space c",
@@ -99,36 +99,36 @@
     {
         "key": "space t",
         "command": "workbench.action.navigateback",
-        "when": "vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.mode != 'Insert'"
     },
     {
         "key": "space a",
         "command": "vscode-harpoon.addEditor",
-        "when": "vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.mode != 'Insert'"
     },
     {
         "key": "space h",
         "command": "vscode-harpoon.editorQuickPick",
-        "when": "vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.mode != 'Insert'"
     },
     {
         "key": "space 1",
         "command": "vscode-harpoon.gotoEditor1",
-        "when": "vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.mode != 'Insert'"
     },
     {
         "key": "space 2",
         "command": "vscode-harpoon.gotoEditor2",
-        "when": "vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.mode != 'Insert'"
     },
     {
         "key": "space 3",
         "command": "vscode-harpoon.gotoEditor3",
-        "when": "vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.mode != 'Insert'"
     },
     {
         "key": "space 4",
         "command": "vscode-harpoon.gotoEditor4",
-        "when": "vim.mode != 'Insert'"
+        "when": "editorTextFocus && vim.mode != 'Insert'"
     }
 ]

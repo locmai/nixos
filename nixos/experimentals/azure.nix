@@ -3,5 +3,8 @@
     # Azure CLI
     kubelogin
     azure-cli
+
+    terraform
+    terraform-plugin-docs
   ];
 }

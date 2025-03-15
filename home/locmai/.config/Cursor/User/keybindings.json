@@ -52,7 +52,7 @@
             "workbench.action.focusLastEditorGroup"
           ]
         },
-        "when": "(filesExplorerFocus || sideBarFocus) && vim.mode != 'Insert'"
+        "when": "(filesExplorerFocus || sideBarFocus) && !searchInputBoxFocus && vim.mode != 'Insert'"
     },
     {
         "key": "space space",
@@ -83,7 +83,7 @@
                 "chat.action.focus"
             ]
          },
-        "when": "!auxiliaryBarFocus && vim.mode != 'Insert'"
+        "when": "!auxiliaryBarFocus && !editorTextFocus && !searchInputBoxFocus && vim.mode != 'Insert'"
     },
     {
         "key": "space c",

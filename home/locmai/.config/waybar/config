@@ -1,0 +1,102 @@
+{
+  "position": "top",
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-right": [
+      "pulseaudio",
+      "network",
+      "memory",
+      "cpu",
+      "temperature",
+      "battery",
+      "clock#date",
+      "clock#time"
+  ],
+  "battery": {
+      "interval": 10,
+      "states": {
+          "warning": 30,
+          "critical": 15
+      },
+      // Connected to AC
+      "format": "{icon}  {capacity}%", // Icon: bolt
+      // Not connected to AC
+      "format-discharging": "{icon}  {capacity}%",
+      "format-icons": [
+          "", // Icon: battery-full
+          "", // Icon: battery-three-quarters
+          "", // Icon: battery-half
+          "", // Icon: battery-quarter
+          ""  // Icon: battery-empty
+      ],
+      "tooltip": true
+  },
+
+  "clock#time": {
+      "interval": 60,
+      "format": "󰥔 {:%H:%M}",
+      "tooltip": false
+  },
+
+  "clock#date": {
+    "interval": 60,
+    "format": "  {:%b %e}", // Icon: calendar-alt
+    "tooltip-format": "{:%B %e}"
+  },
+
+  "cpu": {
+      "interval": 5,
+      "format": "  {usage}% ({load})", // Icon: microchip
+      "states": {
+        "warning": 70,
+        "critical": 90
+      }
+  },
+
+  "memory": {
+      "interval": 5,
+      "format": "  {}%", // Icon: memory
+      "states": {
+          "warning": 70,
+          "critical": 90
+      }
+  },
+
+  "network": {
+      "interval": 5,
+      "format-wifi": "   {essid} ({signalStrength}%)", // Icon: wifi
+      "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+      "format-disconnected": "⚠  Disconnected",
+      "tooltip-format": "{ifname}: {ipaddr}"
+  },
+
+  "pulseaudio": {
+      //"scroll-step": 1,
+      "format": "{icon}   {volume}%",
+      "format-bluetooth": "{icon}  {volume}%",
+      "format-muted": "",
+      "format-icons": {
+          "headphones": "",
+          "handsfree": "",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["", ""]
+      },
+      "on-click": "pavucontrol"
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "interval": 5,
+    "format": "{icon}  {temperatureC}°C",
+    "format-icons": [
+        "", // Icon: temperature-empty
+        "", // Icon: temperature-quarter
+        "", // Icon: temperature-half
+        "", // Icon: temperature-three-quarters
+        ""  // Icon: temperature-full
+    ],
+    "tooltip": true
+  },
+}

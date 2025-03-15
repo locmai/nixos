@@ -1,5 +1,8 @@
 return {
   {
+    "folke/zen-mode.nvim",
+  },
+  {
     "dinhhuy258/git.nvim",
     event = "BufReadPre",
     opts = {

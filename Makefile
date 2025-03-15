@@ -15,6 +15,7 @@ sync-remote:
 	@rm -rf $(HOME_DEST_DIR)
 	@for dir in $(DIRS); do \
         	echo "Copying $$dir from $(HOME_SRC_DIR) to $(HOME_DEST_DIR)"; \
+			  mkdir -p $(HOME_DEST_DIR)/$$dir; \
         	cp -r $(HOME_SRC_DIR)/$$dir $(HOME_DEST_DIR); \
     	done
 	@echo "Copying zsh"	

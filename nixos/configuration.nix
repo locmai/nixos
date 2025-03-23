@@ -55,6 +55,7 @@
         waylandFrontend = true;
         addons = with pkgs; [
           fcitx5-gtk
+          libsForQt5.fcitx5-qt
           fcitx5-configtool
           fcitx5-with-addons
           fcitx5-bamboo

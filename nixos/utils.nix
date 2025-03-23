@@ -38,5 +38,8 @@
     wtype
     wlrctl
     xdg-utils
+
+    # network
+    dig
   ];
 }

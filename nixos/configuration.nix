@@ -7,7 +7,11 @@
   networking.hostName = "nixos";
 
   networking.networkmanager.enable = true;
-
+  services.resolved = {
+    enable = true;
+    domains = ["1.1.1.1" "1.0.0.1"];
+    fallbackDns = ["8.8.8.8" "8.8.4.4"];
+  };
   time.timeZone = "Asia/Ho_Chi_Minh";
 
   nix.settings.experimental-features = [

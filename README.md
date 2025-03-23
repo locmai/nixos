@@ -34,4 +34,3 @@ The components under the `./nixos/experimentals/` directory are not yet fully te
 ## TODOs
 
 - Configure dotfiles (home manager or chezmoi?)
-- Fix `fcitx5` input method

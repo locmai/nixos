@@ -8,6 +8,7 @@
     gcc
     gnumake
     gnupg
+    go-task
     grim
     slurp
     htop

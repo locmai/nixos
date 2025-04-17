@@ -79,7 +79,7 @@
               "ShowInputMethodInformation" = "False";
             };
             "Hotkey/EnumerateForwardKeys" = {
-              "0" = "Alt+Shift+Ctrl";
+              "0" = "Shift+Super+Ctrl";
             };
           };
           addons = {

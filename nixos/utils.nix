@@ -6,6 +6,7 @@
     file
     fzf
     gcc
+    gimp
     gnumake
     gnupg
     go-task

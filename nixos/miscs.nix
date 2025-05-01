@@ -12,11 +12,9 @@
     firefox
     google-chrome
     kitty
-    neofetch
     neovim
     python3
     git
-    go
     tmux
     tree-sitter
     slack

@@ -15,6 +15,6 @@
       "--commit-lock-file"
     ];
     dates = "weekly";
-    # channel = "https://nixos.org/channels/24.11";
+    channel = "https://nixos.org/channels/24.11";
   };
 }

@@ -3,17 +3,16 @@
     # utils
     btop
     curl
+    fastfetch
     file
     fzf
     gcc
-    gimp
     gnumake
     gnupg
     go-task
     grim
     slurp
     htop
-    neofetch
     openssl
     openssl.dev
     pinentry-curses
@@ -40,6 +39,8 @@
     wtype
     wlrctl
     xdg-utils
+
+    gimp
 
     # network
     dig

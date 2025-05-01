@@ -15,6 +15,7 @@
     uv
 
     # Go
+    go
     gotools
 
     # Terraform/HCL

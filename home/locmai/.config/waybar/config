@@ -45,7 +45,7 @@
 
   "cpu": {
       "interval": 5,
-      "format": "  {usage}% ({load})", // Icon: microchip
+      "format": "  {usage}%", // Icon: microchip
       "states": {
         "warning": 70,
         "critical": 90
@@ -54,7 +54,7 @@
 
   "memory": {
       "interval": 5,
-      "format": "  {}%", // Icon: memory
+      "format": "  {}%", // Icon: memory
       "states": {
           "warning": 70,
           "critical": 90
@@ -63,8 +63,8 @@
 
   "network": {
       "interval": 5,
-      "format-wifi": "   {essid} ({signalStrength}%)", // Icon: wifi
-      "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+      "format-wifi": "   {essid}",
+      "format-ethernet": "  {ifname}: {ipaddr}/{cidr}",
       "format-disconnected": "⚠  Disconnected",
       "tooltip-format": "{ifname}: {ipaddr}"
   },

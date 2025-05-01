@@ -42,5 +42,8 @@
 
     # network
     dig
+
+    # zzz
+    zinit
   ];
 }

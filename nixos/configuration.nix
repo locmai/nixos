@@ -21,7 +21,7 @@
   ];
 
   programs = {
-    nix-ld.enable = true;
+    # nix-ld.enable = true;
     zsh = {
       enable = true;
     };
@@ -131,6 +131,13 @@
   programs.ssh.startAgent = true;
   services.dbus.enable = true;
   services.udev.enable = true;
+  services.tlp = {
+    enable = true;
+    settings = {
+      CPU_SCALING_GOVERNOR_ON_AC = "powersave";
+      CPU_SCALING_GOVERNOR_ON_BAT = "performance";
+    };
+  };
 
   system.stateVersion = "24.11";
 }

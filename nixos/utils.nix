@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     # utils
     btop
+    cava
     curl
     fastfetch
     file

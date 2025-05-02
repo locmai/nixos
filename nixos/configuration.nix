@@ -27,7 +27,6 @@
   };
 
   programs = {
-    # nix-ld.enable = true;
     zsh = {
       enable = true;
     };
@@ -36,6 +35,7 @@
       silent = true;
     };
   };
+
   # TODO update user per host when new ones are added
   users.users.locmai = {
     isNormalUser = true;

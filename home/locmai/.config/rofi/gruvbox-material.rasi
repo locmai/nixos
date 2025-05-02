@@ -25,7 +25,7 @@ window {
     width: 600;
 
     border: 1;
-    border-radius: 10;
+    border-radius: 5;
     border-color: @bgStatusline3;
 }
 
@@ -47,7 +47,7 @@ message {
 
 listview {
     padding: 8;
-    border-radius: 0 0 10 10;
+    border-radius: 0 0 5 5;
     border: 2 2 2 2;
     border-color: @bg0;
     background-color: @bg0;

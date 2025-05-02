@@ -16,6 +16,10 @@
     # Vue
     vue-language-server
 
+    # Hyprland
+    hyprls
+    hyprlang
+
     # Misc
     marksman
     markdown-oxide

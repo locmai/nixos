@@ -27,8 +27,7 @@
   };
 
   programs = {
-    zsh.enable = true;
-    fish.enable = true;
+    # zsh.enable = true;
     direnv = {
       enable = true;
       silent = true;
@@ -39,7 +38,7 @@
   users.users.locmai = {
     isNormalUser = true;
     description = "Loc Mai";
-    shell = pkgs.zsh;
+    # shell = pkgs.zsh;
     extraGroups = [
       "networkmanager"
       "wheel"

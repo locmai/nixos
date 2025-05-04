@@ -2,7 +2,12 @@
   environment.systemPackages = with pkgs; [
     code-cursor
     starship
-    fish
     zsh
+    fish
+    fishPlugins.grc
+    fishPlugins.fzf
+    fishPlugins.forgit
+    fishPlugins.sponge
+    fishPlugins.gruvbox
   ];
 }

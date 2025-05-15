@@ -146,6 +146,8 @@
   };
 
   system.stateVersion = "24.11";
+
+  # temporary because I'm dumb
   services.udev.extraRules = ''
         ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="04d9", ATTR{idProduct}=="a0a2", MODE="0666"
          Atmel DFU

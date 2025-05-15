@@ -48,5 +48,7 @@
 
     # zzz
     zinit
+    qmk
+    libgcc
   ];
 }

@@ -50,5 +50,7 @@
     zinit
     qmk
     libgcc
+    vial
+    zoom
   ];
 }

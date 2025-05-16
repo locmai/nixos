@@ -51,6 +51,6 @@
     qmk
     libgcc
     vial
-    zoom
+    zoom-us
   ];
 }

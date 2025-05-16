@@ -122,6 +122,7 @@
 
   # Sound
   hardware.pulseaudio.enable = false;
+  hardware.keyboard.qmk.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -136,6 +137,9 @@
   programs.ssh.startAgent = true;
   services.dbus.enable = true;
   services.udev.enable = true;
+  services.udev.packages = with pkgs; [
+    via
+  ];
   services.tlp = {
     enable = true;
     settings = {

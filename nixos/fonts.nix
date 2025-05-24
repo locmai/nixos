@@ -1,11 +1,6 @@
 {pkgs, ...}: {
-  fonts.packages = with pkgs; [
-    jetbrains-mono
-    (nerdfonts.override {
-      fonts = [
-        "FiraCode"
-      ];
-    })
-    nerd-font-patcher
+  fonts.packages = [
+    pkgs.nerd-fonts.fira-code
+    pkgs.nerd-font-patcher
   ];
 }

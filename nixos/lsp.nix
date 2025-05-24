@@ -4,7 +4,7 @@
     alejandra
 
     # Python
-    ruff-lsp
+    ruff
 
     # NodeJS
     typescript-language-server

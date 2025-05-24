@@ -22,7 +22,7 @@
 
     plymouth = {
       enable = true;
-      font = "${pkgs.nerdfonts}/share/fonts/truetype/NerdFonts/FiraCodeNerdFont-Regular.ttf";
+      # font = "${pkgs.nerdfonts}/share/fonts/truetype/NerdFonts/FiraCodeNerdFont-Regular.ttf";
       themePackages = with pkgs; [
         (adi1090x-plymouth-themes.override {
           selected_themes = ["deus_ex"];

@@ -121,9 +121,9 @@
   };
 
   # Sound
-  hardware.pulseaudio.enable = false;
   hardware.keyboard.qmk.enable = true;
   security.rtkit.enable = true;
+  services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -141,7 +141,7 @@
     packages = with pkgs; [
       via
     ];
-    extraRules = builtins.readFile ./udev/50-qmk.rules;
+    # extraRules = builtins.readFile ./udev/50-qmk.rules;
   };
   services.tlp = {
     enable = true;
@@ -152,5 +152,5 @@
     };
   };
 
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.05";
 }

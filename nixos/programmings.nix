@@ -22,7 +22,7 @@
     hclfmt
 
     # NodeJS
-    nodejs_23
+    nodejs
     nodePackages_latest.webpack
     nodePackages_latest.webpack-cli
   ];

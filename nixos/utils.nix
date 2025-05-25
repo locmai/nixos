@@ -20,7 +20,9 @@
     ripgrep
     tree
     unzip
+    vlc
     wget
+    zinit
 
     # jq/yq/json
     jsonnet
@@ -40,17 +42,18 @@
     wtype
     wlrctl
     xdg-utils
-
     gimp
 
     # network
     dig
 
-    # zzz
-    zinit
-    qmk
-    libgcc
-    vial
+    # messenger/video
     zoom-us
+    signal-desktop
+
+    # keyboard
+    qmk
+    vial
+    libgcc
   ];
 }

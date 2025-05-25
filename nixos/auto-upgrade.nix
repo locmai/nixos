@@ -5,7 +5,7 @@
   # I recommend running `topgrade` once a week or at least once a month)
   system.autoUpgrade = {
     enable = true;
-    operation = "switch"; # If you don't want to apply updates immediately, only after rebooting, use `boot` option in this case
+    operation = "switch";
     flake = "/home/locmai/Workspace/nixos/nixos";
     flags = [
       "--update-input"
@@ -15,6 +15,5 @@
       "--commit-lock-file"
     ];
     dates = "weekly";
-    # channel = "https://nixos.org/channels/24.11";
   };
 }

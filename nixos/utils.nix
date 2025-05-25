@@ -1,5 +1,13 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    # browser/terminal/message apps
+    brave
+    firefox
+    google-chrome
+    kitty
+    qt6.qtwayland
+    libsForQt5.qt5.qttools
+
     # utils
     btop
     cava
@@ -22,7 +30,18 @@
     unzip
     vlc
     wget
+    yazi
     zinit
+
+    # OBS
+    xorg.xprop
+    (pkgs.wrapOBS {
+      plugins = with pkgs.obs-studio-plugins; [
+        wlrobs
+        obs-backgroundremoval
+        obs-pipewire-audio-capture
+      ];
+    })
 
     # jq/yq/json
     jsonnet

@@ -1,5 +1,10 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    # vim
+    neovim
+    git
+    tree-sitter
+
     # Rust
     cargo
     cargo-generate
@@ -12,6 +17,7 @@
     nixfmt-rfc-style
 
     # Python
+    python3
     uv
 
     # Go

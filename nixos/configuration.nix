@@ -3,16 +3,20 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
+  hardware.keyboard.qmk.enable = true;
 
-  networking.hostName = "nixos";
+  networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
+    nameservers = ["1.1.1.1" "1.0.0.1"];
+  };
 
-  networking.networkmanager.enable = true;
-  networking.nameservers = ["1.1.1.1" "1.0.0.1"];
   services.resolved = {
     enable = true;
     domains = ["1.1.1.1" "1.0.0.1"];
     fallbackDns = ["8.8.8.8" "8.8.4.4"];
   };
+
   time.timeZone = "Asia/Ho_Chi_Minh";
 
   nix.settings.experimental-features = [
@@ -24,7 +28,6 @@
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
     EDITOR = "nvim";
     KUBE_EDITOR = "nvim";
-    SHELL = "fish";
   };
 
   programs = {
@@ -121,7 +124,6 @@
   };
 
   # Sound
-  hardware.keyboard.qmk.enable = true;
   security.rtkit.enable = true;
   services.pulseaudio.enable = false;
   services.pipewire = {

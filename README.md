@@ -11,8 +11,7 @@ Please note that this setup is not minimalistic, lightweight, or fully optimized
 - **Distro**: NixOS
 - **Terminal**: Kitty
 - **Shell**: Zsh
-- **Display server**: Wayland
-- **Window manager**: Hyprland
+- **Compositor** & **Window manager**: Hyprland
 - **Bar**: Waybar
 - **Launcher**: Rofi-Wayland
 - **Wallpaper**: Hyprpaper
@@ -33,4 +32,4 @@ The components under the `./nixos/experimentals/` directory are not yet fully te
 
 ## TODOs
 
-- Configure dotfiles (home manager or chezmoi?)
+- Configure dotfiles (home manager or chezmoi?) - still too lazy to start working on this

@@ -4,7 +4,7 @@
     usbutils
 
     eza
-    carbon-now-cli
+    devenv
     pokeget-rs
     libsForQt5.kdenlive
   ];

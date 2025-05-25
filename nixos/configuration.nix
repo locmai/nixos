@@ -113,6 +113,7 @@
     playerctl
     rofi-wayland
     waybar
+    gbar
   ];
 
   xdg.portal = {

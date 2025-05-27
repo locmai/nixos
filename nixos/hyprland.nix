@@ -19,5 +19,7 @@
     hyprpaper
     pyprland
     hyprland-qtutils.packages."${pkgs.system}".default
+
+    gbar
   ];
 }

@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     code-cursor
-    starship
+    icebreaker
     # zsh
     # fish
     # fishPlugins.grc

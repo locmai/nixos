@@ -17,5 +17,6 @@
     # Azure CLI
     kubelogin
     azure-cli
+    colima
   ];
 }

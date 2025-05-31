@@ -31,5 +31,7 @@
     nodejs
     nodePackages_latest.webpack
     nodePackages_latest.webpack-cli
+
+    ollama
   ];
 }

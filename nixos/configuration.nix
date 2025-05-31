@@ -39,7 +39,6 @@
     };
   };
 
-  # TODO update user per host when new ones are added
   users.users.locmai = {
     isNormalUser = true;
     description = "Loc Mai";

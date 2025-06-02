@@ -7,6 +7,7 @@
     kitty
     qt6.qtwayland
     libsForQt5.qt5.qttools
+    steam
 
     # utils
     btop

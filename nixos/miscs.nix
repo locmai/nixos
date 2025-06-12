@@ -7,5 +7,7 @@
     devenv
     pokeget-rs
     libsForQt5.kdenlive
+
+    yt-dlp
   ];
 }

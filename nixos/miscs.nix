@@ -9,5 +9,6 @@
     libsForQt5.kdenlive
 
     yt-dlp
+    audacity
   ];
 }

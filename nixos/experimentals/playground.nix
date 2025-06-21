@@ -9,5 +9,6 @@
     # fishPlugins.forgit
     # fishPlugins.sponge
     # fishPlugins.gruvbox
+    oversteer
   ];
 }

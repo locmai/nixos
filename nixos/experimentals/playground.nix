@@ -10,5 +10,6 @@
     # fishPlugins.sponge
     # fishPlugins.gruvbox
     oversteer
+    hugo
   ];
 }

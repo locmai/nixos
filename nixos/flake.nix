@@ -38,7 +38,6 @@
           ./hyprland.nix
           ./kubernetes.nix
           ./theme.nix
-          ./lsp.nix
           ./miscs.nix
           ./notifications.nix
           ./programmings.nix

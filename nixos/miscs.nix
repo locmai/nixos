@@ -4,7 +4,6 @@
     usbutils
 
     eza
-    devenv
     pokeget-rs
     libsForQt5.kdenlive
 

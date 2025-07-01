@@ -9,5 +9,6 @@
 
     yt-dlp
     audacity
+    signal-desktop
   ];
 }

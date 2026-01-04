@@ -30,8 +30,6 @@
 
     # NodeJS
     nodejs
-    nodePackages_latest.webpack
-    nodePackages_latest.webpack-cli
 
     # AI/ML
     ollama
@@ -50,7 +48,6 @@
     typescript-language-server
     nodePackages_latest.vscode-langservers-extracted
     nodePackages_latest.yaml-language-server
-    nodePackages_latest.dockerfile-language-server-nodejs
     nodePackages_latest.bash-language-server
 
     # Vue
@@ -72,6 +69,5 @@
     cmake-language-server
     docker-compose-language-service
     terraform-ls
-    ansible-language-server
   ];
 }

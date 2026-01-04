@@ -62,8 +62,8 @@
         addons = with pkgs; [
           fcitx5-gtk
           libsForQt5.fcitx5-qt
-          fcitx5-configtool
-          fcitx5-with-addons
+          qt6Packages.fcitx5-configtool
+          qt6Packages.fcitx5-with-addons
           fcitx5-bamboo
         ];
         settings = {
@@ -111,7 +111,7 @@
     pamixer
     pavucontrol
     playerctl
-    rofi-wayland
+    rofi
     waybar
     gbar
   ];
@@ -155,5 +155,5 @@
     };
   };
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 }

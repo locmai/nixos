@@ -10,7 +10,6 @@
     extraPackages = with pkgs; [
       intel-compute-runtime
       intel-media-driver # LIBVA_DRIVER_NAME=iHD
-      vaapiVdpau
       libvdpau-va-gl
       mesa
       nvidia-vaapi-driver
@@ -18,7 +17,6 @@
     ];
     extraPackages32 = with pkgs.pkgsi686Linux; [
       intel-media-driver
-      vaapiVdpau
       mesa
       libvdpau-va-gl
     ];

@@ -69,5 +69,10 @@
     cmake-language-server
     docker-compose-language-service
     terraform-ls
+
+    # AI agents
+    claude-code
+
+    step-cli
   ];
 }

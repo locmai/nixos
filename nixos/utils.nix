@@ -69,7 +69,6 @@
 
     # messenger/video
     zoom-us
-    gurk-rs
 
     # keyboard
     qmk

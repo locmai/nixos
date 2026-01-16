@@ -2,9 +2,6 @@
   environment.variables.GTK_THEME = "Gruvbox-Dark-BL-LB";
   environment.variables.XCURSOR_SIZE = "24";
   environment.variables.HYPRCURSOR_SIZE = "24";
-  # qt.enable = true;
-  # qt.platformTheme = "gtk2";
-  # qt.style = "gruvbox-dark";
   console = {
     earlySetup = true;
     colors = [

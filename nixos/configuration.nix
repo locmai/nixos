@@ -17,7 +17,7 @@
     fallbackDns = ["8.8.8.8" "8.8.4.4"];
   };
 
-  time.timeZone = "Asia/Ho_Chi_Minh";
+  time.timeZone = "America/Los_Angeles";
 
   nix.settings.experimental-features = [
     "nix-command"

@@ -4,6 +4,6 @@ waybar &
 hyprpaper &
 avizo-service &
 brave --new-window --class=landing-brave &
-kitty --title landing-kitty & 
+ghostty --title landing-ghostty &
 fcitx5 -d
 dunst

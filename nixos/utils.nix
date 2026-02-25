@@ -4,6 +4,7 @@
     brave
     firefox
     google-chrome
+    ghostty
     kitty
     qt6.qtwayland
     libsForQt5.qt5.qttools

@@ -1,5 +1,17 @@
 return {
   {
+    "folke/snacks.nvim",
+    opts = {
+      terminal = {
+        win = {
+          style = "float",
+          width = math.floor(vim.o.columns * 0.5),
+          height = math.floor(vim.o.lines * 0.5),
+        },
+      },
+    },
+  },
+  {
     "nvim-neo-tree/neo-tree.nvim",
     keys = {
       { "<leader>e", "<cmd>Neotree reveal float toggle<cr>", desc = "Toggle NeoTree" },
@@ -12,8 +24,8 @@ return {
     "3rd/image.nvim",
     build = false, -- so that it doesn't build the rock https://github.com/3rd/image.nvim/issues/91#issuecomment-2453430239
     opts = {
-        processor = "magick_cli",
-    }
+      processor = "magick_cli",
+    },
   },
   {
     "dinhhuy258/git.nvim",

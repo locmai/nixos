@@ -79,6 +79,7 @@ M.defaults = function()
     "dagger",
     "terraformls",
     "ts_ls",
+    "lua-language-server",
   }
 
   for _, lsp in ipairs(servers) do

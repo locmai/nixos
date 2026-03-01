@@ -2,17 +2,26 @@
   "keyboard": "glove80",
   "firmware_api_version": "1",
   "locale": "en-US",
-  "uuid": "9592a6e8-4fb9-4287-8fe9-e5067f2dc89c",
+  "uuid": "86a59f3a-cca5-4a75-afde-4923baa57bba",
   "parent_uuid": "1046584c-070c-4ce0-b17d-2647f803cc0e",
   "unlisted": false,
-  "date": 1772257293,
-  "creator": "Loc Mai",
+  "date": 1772336537,
+  "creator": "loc",
   "title": "LM",
   "notes": "Glove80 layout with a few extra keys. The extra keys are for the thumb cluster, and the top row is for function keys. The second layer is for media keys and some extra keys. The third layer is for Bluetooth and RGB controls.",
   "tags": [],
   "custom_defined_behaviors": "",
   "custom_devicetree": "",
-  "config_parameters": [],
+  "config_parameters": [
+    {
+      "paramName": "HID_POINTING",
+      "value": "y"
+    },
+    {
+      "paramName": "HID_POINTING_SMOOTH_SCROLLING",
+      "value": "y"
+    }
+  ],
   "layout_parameters": {},
   "layer_names": [
     "Base",
@@ -690,7 +699,12 @@
         ]
       },
       {
-        "value": "&trans"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "GRAVE"
+          }
+        ]
       },
       {
         "value": "&kp",

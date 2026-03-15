@@ -7,7 +7,23 @@
 
   networking = {
     hostName = "nixos";
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      # Prioritize WiFi over Ethernet by setting route metrics
+      # Lower metric = higher priority
+      settings = {
+        "connection-wifi" = {
+          # WiFi is faster and preferred over Ethernet for my own use case
+          "match-device" = "type:wifi";
+          "ipv4.route-metric" = 50;
+        };
+        "connection-ethernet" = {
+          # Ethernet goes through Samsung monitor KVM, slower than WiFi
+          "match-device" = "type:ethernet";
+          "ipv4.route-metric" = 600;
+        };
+      };
+    };
     nameservers = ["1.1.1.1" "1.0.0.1"];
   };
 

@@ -74,5 +74,13 @@
     claude-code
 
     step-cli
+    mesa
+    libgbm
+    libGL
+    libx11
+    libxcursor
+    libxrandr
+    virtualglLib
+    steam-run
   ];
 }

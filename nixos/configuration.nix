@@ -50,6 +50,7 @@
   programs = {
     zsh.enable = true;
     fish.enable = true;
+    nix-ld.enable = true;
     direnv = {
       enable = true;
       silent = true;
@@ -118,7 +119,6 @@
 
   # Allow unfree packages and broken like my heart
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowBroken = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

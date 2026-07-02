@@ -46,9 +46,9 @@
 
     # NodeJS
     typescript-language-server
-    nodePackages_latest.vscode-langservers-extracted
-    nodePackages_latest.yaml-language-server
-    nodePackages_latest.bash-language-server
+    vscode-langservers-extracted
+    yaml-language-server
+    bash-language-server
 
     # Vue
     vue-language-server

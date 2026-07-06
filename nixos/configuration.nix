@@ -165,9 +165,16 @@
   services.tlp = {
     enable = true;
     settings = {
+      # intel_pstate: "powersave" is the dynamic governor (still bursts to
+      # turbo under load); "performance" pins all cores to max clock.
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "performance";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      # EPP hint (energy vs. performance) within the chosen governor.
       CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
+      # Allow turbo boost on AC, disable it on battery to cut heat/drain.
+      CPU_BOOST_ON_AC = 1;
+      CPU_BOOST_ON_BAT = 0;
     };
   };
 

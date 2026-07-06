@@ -15,6 +15,7 @@
     cava
     curl
     fastfetch
+    fd
     file
     fzf
     gcc

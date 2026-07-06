@@ -30,8 +30,20 @@ sync-remote:
 update:
 	nix flake update --flake ./nixos/
 
+TESTS := smoke bluetooth virtualisation
+
 test:
 	nix flake check ./nixos/ --print-build-logs
+
+# Readable summary of what each VM test verified: builds every test (cache hits
+# are fine) then prints its named subtest checklist from the stored log.
+test-report:
+	@for t in $(TESTS); do \
+		nix build ./nixos#checks.x86_64-linux.$$t 2>/dev/null; \
+		echo "=== $$t ==="; \
+		nix log ./nixos#checks.x86_64-linux.$$t 2>/dev/null \
+			| grep -E 'subtest:|test script finished' || echo "  (no log yet — run 'make test')"; \
+	done
 
 # Replay the VM test's stored log (useful when `test` is a cache hit and prints
 # nothing). Force a real re-run with: make test-force

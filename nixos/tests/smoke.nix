@@ -14,18 +14,6 @@
     environment.sessionVariables.EDITOR = "nvim";
   };
 
-  # Python test driver. `machine` is the node defined above.
-  testScript = ''
-    machine.wait_for_unit("multi-user.target")
-
-    # zsh is installed and usable as a login shell
-    machine.succeed("test -x $(command -v zsh)")
-    machine.succeed("zsh -c 'echo hello' | grep -q hello")
-
-    # baseline package is on PATH
-    machine.succeed("rg --version")
-
-    # session variable is set in the environment
-    machine.succeed("grep -q 'EDITOR=\"nvim\"' /etc/set-environment")
-  '';
+  # Python test driver (./smoke.py). `machine` is the node defined above.
+  testScript = builtins.readFile ./smoke.py;
 }

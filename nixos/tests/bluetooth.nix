@@ -7,16 +7,5 @@
     imports = [../bluetooth.nix];
   };
 
-  testScript = ''
-    machine.wait_for_unit("multi-user.target")
-
-    # hardware.bluetooth.enable defines the bluez unit
-    machine.succeed("systemctl cat bluetooth.service")
-
-    # powerOnBoot = true => AutoEnable in bluez main.conf
-    machine.succeed("grep -iE 'AutoEnable *= *true' /etc/bluetooth/main.conf")
-
-    # services.blueman.enable installs the applet
-    machine.succeed("command -v blueman-applet")
-  '';
+  testScript = builtins.readFile ./bluetooth.py;
 }

@@ -1,5 +1,13 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  unstable,
+  ...
+}:
+{
   environment.systemPackages = with pkgs; [
+    # from unstable
+    unstable.herdr
+
     # browser/terminal/message apps
     brave
     firefox
@@ -37,7 +45,7 @@
     zinit
 
     # OBS
-    xorg.xprop
+    xprop
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs

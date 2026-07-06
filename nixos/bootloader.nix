@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   boot = {
     loader = {
       systemd-boot.enable = true;
@@ -24,7 +24,7 @@
       enable = true;
       themePackages = with pkgs; [
         (adi1090x-plymouth-themes.override {
-          selected_themes = ["deus_ex"];
+          selected_themes = [ "deus_ex" ];
         })
       ];
       theme = "deus_ex";

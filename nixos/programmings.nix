@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     # vim
     neovim
@@ -14,7 +14,7 @@
     rustup
 
     # Nix
-    nixfmt-rfc-style
+    nixfmt
 
     # Python
     python3

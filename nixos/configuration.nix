@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -24,13 +24,24 @@
         };
       };
     };
-    nameservers = ["1.1.1.1" "1.0.0.1"];
+    nameservers = [
+      "1.1.1.1"
+      "1.0.0.1"
+    ];
   };
 
   services.resolved = {
     enable = true;
-    domains = ["1.1.1.1" "1.0.0.1"];
-    fallbackDns = ["8.8.8.8" "8.8.4.4"];
+    settings.Resolve = {
+      Domains = [
+        "1.1.1.1"
+        "1.0.0.1"
+      ];
+      FallbackDNS = [
+        "8.8.8.8"
+        "8.8.4.4"
+      ];
+    };
   };
 
   time.timeZone = "America/Los_Angeles";
@@ -65,7 +76,7 @@
       "wheel"
     ];
     packages = with pkgs; [
-      youtube-music
+      pear-desktop
     ];
   };
 
@@ -129,7 +140,6 @@
     playerctl
     rofi
     waybar
-    gbar
   ];
 
   xdg.portal = {

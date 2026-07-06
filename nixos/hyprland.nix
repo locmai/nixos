@@ -2,7 +2,8 @@
   pkgs,
   hyprland-qtutils,
   ...
-}: {
+}:
+{
   programs.hyprland.enable = true;
 
   environment.sessionVariables = {
@@ -19,8 +20,6 @@
     hypridle
     hyprpaper
     pyprland
-    hyprland-qtutils.packages."${pkgs.system}".default
-
-    gbar
+    hyprland-qtutils.packages."${pkgs.stdenv.hostPlatform.system}".default
   ];
 }

@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   environment.variables.GTK_THEME = "Gruvbox-Dark-BL-LB";
   environment.variables.XCURSOR_SIZE = "24";
   environment.variables.HYPRCURSOR_SIZE = "24";
@@ -26,7 +26,7 @@
 
   # Override packages
   nixpkgs.config.packageOverrides = pkgs: {
-    colloid-icon-theme = pkgs.colloid-icon-theme.override {colorVariants = ["default"];};
+    colloid-icon-theme = pkgs.colloid-icon-theme.override { colorVariants = [ "default" ]; };
     discord = pkgs.discord.override {
       withOpenASAR = true;
       withTTS = true;

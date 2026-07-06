@@ -15,9 +15,10 @@
 }
 	
 window#waybar {
-	background:transparent;
-	border-radius: 1px;
-	color: whitesmoke;
+	background: #282828;
+	border: 2px solid #fe8019;
+	border-radius: 8px;
+	color: #ebdbb2;
 }
 	
 window#waybar.hidden {
@@ -63,15 +64,39 @@ tooltip {
 }
    
 #workspaces button.active {
-	color: whitesmoke;
+	color: #fe8019;
 }
   
 #workspaces button.urgent {
 	color: #11111b;
 }
 
+/* gruvbox hover for all buttons (overrides GTK default white bg) */
+button {
+  background: transparent;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background: #3c3836;
+  background-image: none;
+  background-color: #3c3836;
+  color: #ebdbb2;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  text-shadow: none;
+  transition: none;
+}
+
 #workspaces button:hover {
-  color: #6E6A86;
+  color: #282828;
+  background: #fe8019;
+  background-color: #fe8019;
 }
 
 	   
@@ -208,14 +233,16 @@ tooltip {
 }
 	
 window#waybar {
-	background:transparent;
-	border-radius: 1px;
-	color: whitesmoke;
+	background: #282828;
+	border: 2px solid #fe8019;
+	border-radius: 8px;
+	color: #ebdbb2;
 }
 	
 window#waybar.hidden {
 	opacity: 0.5;
 }
+
 window#waybar.empty {
 	background-color: transparent;
 }

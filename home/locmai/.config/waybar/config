@@ -1,5 +1,8 @@
 {
   "position": "top",
+  "margin-top": 8,
+  "margin-left": 7,
+  "margin-right": 7,
   "modules-left": ["hyprland/workspaces"],
   "modules-right": [
       "pulseaudio",

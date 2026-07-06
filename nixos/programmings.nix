@@ -15,66 +15,59 @@
 
     # Nix
     nixfmt
+    nil
 
     # Python
     python3
     uv
+    ruff
 
     # Go
     go
     gotools
     gopls
+    delve
 
     # Terraform/HCL
     hclfmt
+    terraform-ls
 
     # NodeJS
     nodejs
+    typescript-language-server
+    vscode-langservers-extracted
+    yaml-language-server
+    bash-language-server
+    emmet-language-server
 
-    # AI/ML
-    ollama
-
-    # Nix
-    alejandra
+    # Vue
+    vue-language-server
 
     # Lua
     lua-language-server
     stylua
 
-    # Python
-    ruff
-
-    # NodeJS
-    typescript-language-server
-    vscode-langservers-extracted
-    yaml-language-server
-    bash-language-server
-
-    # Vue
-    vue-language-server
+    # AI/ML
+    ollama
 
     # Hyprland
     hyprls
     hyprlang
 
-    # Misc
-    marksman
-    markdown-oxide
-    nil
-    zls
-    jsonfmt
-    delve
-    emmet-language-server
-    buf
-    cmake-language-server
-    docker-compose-language-service
-    terraform-ls
-
     # AI agents
     claude-code
 
+    # Misc
+    marksman
+    markdown-oxide
+    zls
+    jsonfmt
+    buf
+    cmake-language-server
+    docker-compose-language-service
     step-cli
-    mesa
+
+    # Graphics/GL libs
     libgbm
     libGL
     libx11

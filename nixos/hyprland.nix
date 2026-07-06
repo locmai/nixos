@@ -19,7 +19,6 @@
     hyprlock
     hypridle
     hyprpaper
-    pyprland
     hyprland-qtutils.packages."${pkgs.stdenv.hostPlatform.system}".default
   ];
 }

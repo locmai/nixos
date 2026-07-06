@@ -18,6 +18,5 @@
     podman-compose
     qemu
     trivy
-    kind
   ];
 }

@@ -30,5 +30,16 @@ sync-remote:
 update:
 	nix flake update --flake ./nixos/
 
+test:
+	nix flake check ./nixos/ --print-build-logs
+
+# Replay the VM test's stored log (useful when `test` is a cache hit and prints
+# nothing). Force a real re-run with: make test-force
+test-log:
+	nix log ./nixos#checks.x86_64-linux.smoke
+
+test-force:
+	nix build ./nixos#checks.x86_64-linux.smoke -L --rebuild
+
 verify-nix-store:
 	sudo nix-store --verify --check-contents --repair

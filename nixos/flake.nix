@@ -19,6 +19,12 @@
     hyprland-qtutils,
   }: {
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+
+    # NixOS VM tests, run with `nix flake check` (see ./tests).
+    checks.x86_64-linux = import ./tests {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    };
+
     nixosConfigurations = {
       x1carbon = nixpkgs.lib.nixosSystem {
         specialArgs = {

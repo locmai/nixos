@@ -62,6 +62,7 @@
             home-manager.nixosModules.home-manager
 
             # Unsustainable modules
+            ./experimentals/ags.nix
             ./experimentals/azure.nix
             ./experimentals/playground.nix
           ];
